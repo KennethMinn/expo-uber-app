@@ -39,7 +39,7 @@ const InputField: FC<InputFieldProps> = ({
 
   const combinedLabelStyle = ["text-lg mb-1", labelStyle].join(" ");
   const combinedInputStyle = [
-    "rounded-full p-4 text-sm flex-1 mb-1",
+    "rounded-full p-4 text-sm flex-1 mb-1 h-full",
     inputStyle,
   ].join(" ");
   const combinedIconStyle = ["w-6 h-6 ml-4", iconStyle].join(" ");

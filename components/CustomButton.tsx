@@ -1,6 +1,6 @@
 import { ButtonProps } from "@/types/type";
 import { FC } from "react";
-import { Text, TouchableOpacity } from "react-native";
+import { ActivityIndicator, Text, TouchableOpacity } from "react-native";
 
 // Constants for variant styles
 const BG_VARIANTS = {
@@ -24,6 +24,7 @@ const CustomButton: FC<ButtonProps> = ({
   title,
   bgVariant = "primary",
   textVariant = "default",
+  isLoading,
   IconLeft,
   IconRight,
   className = "",
@@ -45,6 +46,7 @@ const CustomButton: FC<ButtonProps> = ({
       activeOpacity={0.8}
       {...props}
     >
+      {isLoading && <ActivityIndicator className="w-5 h-5 mx-2 " />}
       {IconLeft && <IconLeft testID="button-icon-left" />}
       <Text className={`text-lg font-bold ${textStyle}`}>{title}</Text>
       {IconRight && <IconRight testID="button-icon-right" />}
